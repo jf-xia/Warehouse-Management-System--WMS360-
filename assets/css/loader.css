@@ -1,0 +1,81 @@
+.load__none {
+    display: none;
+    color:#fff;
+}
+
+.load__animation{
+    border: 5px solid #06af94;
+    border-top-color: #e50914;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    margin: auto;
+    -webkit-animation: turn 1.5s linear infinite;
+    -o-animation: turn 1.5s linear infinite;
+    animation: turn 1.5s linear infinite;
+}
+
+.load {
+    position: fixed;
+    /*background: url('assets/images/preloader.png') no-repeat 50% fixed / cover;);*/
+    background: black;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0.8;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    z-index: 999;
+}
+
+
+
+.load__container {
+    position: relative;
+}
+
+@keyframes turn {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+
+.load__title {
+    color: #fff;
+    font-size: 2rem;
+}
+
+
+@keyframes loadPage {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
+}
